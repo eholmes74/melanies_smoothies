@@ -19,7 +19,7 @@ session = cnx.session()
 #session = get_active_session()
 
 # my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'))
-my_dataframe = session.table("smoothies.public.fruit_options").filter(col('SEARCH_ON'))
+my_dataframe = session.table("smoothies.public.fruit_options").select(col('SEARCH_ON'))
 #st.dataframe(data=my_dataframe, use_container_width=True)
 
 ingredients_list = st.multiselect(
@@ -39,7 +39,7 @@ if (ingredients_list and name_on_order):
         st.dataframe(data=smoothiefroot_response.json(), use_container_width=True)
         st.stop
 
-        # ingregients.list = st.multiselect()
+        ingregients.list = st.multiselect()
 
     st.write(ingredients_string)
 
