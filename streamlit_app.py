@@ -48,7 +48,7 @@ if (ingredients_list and name_on_order):
         st.dataframe(data=smoothiefroot_response.json(), use_container_width=True)
         # st.stop
 
-        ingregients.list = st.multiselect()
+        # ingregients.list = st.multiselect()
 
     st.write(ingredients_string)
 
