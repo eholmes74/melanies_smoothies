@@ -37,7 +37,7 @@ if (ingredients_list and name_on_order):
         st.subheader(fruit_chosen + ' Nutrition Information')
         smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/all")  
         st.dataframe(data=smoothiefroot_response.json(), use_container_width=True)
-        st.stop
+        # st.stop
 
         ingregients.list = st.multiselect()
 
